@@ -117,6 +117,60 @@ body {
 
 
 
+/* Container & Base Text */
+.hero-bio {
+  overflow: hidden; 
+}
+
+.hero-text {
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px; /* Makes it look more professional */
+}
+
+/* Static Yellow Highlight */
+.text-yellow {
+  color: #d7d406; /* Your specific brand yellow */
+  font-weight: 600; /* Makes it slightly bolder so it pops */
+}
+
+/* Visual Column Styles */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background-color: #ff00ff; /* Pink glow */
+  border-radius: 50%;
+  filter: blur(80px); /* Soft glow effect */
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.hero-img {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  border-radius: 4px; /* Slight roundness on the album art */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+
+
+
+
+
+
+
+
 /* Section Container */
 .hero-section {
   background: #000;
