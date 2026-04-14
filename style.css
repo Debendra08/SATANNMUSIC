@@ -213,3 +213,133 @@ body {
   padding: 12px 30px;
   text-decoration: none;
 }
+
+
+
+
+
+/* Container for the scroll */
+.album-scroller {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scroll */
+  gap: 20px; /* Space between cards */
+  padding: 20px 0;
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.album-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Item Width */
+.album-item {
+  flex: 0 0 130px; /* Each card will stay exactly 130px wide */
+}
+
+/* Card Styling */
+.album-card {
+  background-color: #111; /* Dark card */
+  border: 1px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  color: white;
+}
+
+.album-card:hover {
+  transform: translateY(-10px); /* Lifts up on hover */
+  border-color: #35340a; /* Glows yellow on hover */
+}
+
+.album-card img {
+  filter: grayscale(40%); /* Moody music vibe */
+  transition: 0.3s;
+}
+
+.album-card:hover img {
+  filter: grayscale(0%); /* Full color on hover */
+}
+
+.album-card .card-title {
+  color: #d7d406; /* Brand Yellow */
+  font-weight: bold;
+}
+
+
+
+/* The Bento Grid Container */
+.collab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "promo promo"
+    "feature beats"
+    "mixing mixing";
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Assigning Areas & Heights */
+.promo { grid-area: promo; height: 180px; background-image: url('./images/promo.jpg'); }
+.feature { grid-area: feature; height: 320px; background-image: url('./images/feature.jpg'); }
+.beats { grid-area: beats; height: 320px; background-image: url('./images/production.jpg'); }
+.mixing { grid-area: mixing; height: 180px; background-image: url('./images/studio.jpg'); }
+
+/* Card Styling */
+.collab-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px; /* Rounded corners like your example */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.collab-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark tint for text readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-overlay h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+/* --- Contact Buttons --- */
+.btn-action {
+  padding: 12px 35px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.call { background: #d7d406; color: #000; }
+.msg { border: 2px solid #d7d406; color: #d7d406; }
+
+.btn-action:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .collab-grid {
+    grid-template-areas: 
+      "promo promo"
+      "feature feature"
+      "beats beats"
+      "mixing mixing";
+  }
+}
