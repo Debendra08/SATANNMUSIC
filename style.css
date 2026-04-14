@@ -1,7 +1,8 @@
 /* 1. Root Variables */
 :root {
   --lime-green: #c1ff00;
-  --brand-yellow: #d7d406;
+  --brand-yellow: #d7d406;      
+  /* #d7d406 */
 }
 
 /* 2. Page & Navbar Backgrounds */
@@ -15,7 +16,7 @@ body {
 
 /* 3. The Brand/Logo Fix */
 .navbar-custom .navbar-brand {
-  color: #ffffff !important;
+  color: #d7d406 !important;
   transition: 0.3s;
 }
 
@@ -51,17 +52,6 @@ body {
   color: #000;
 }
 
-.cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background: white;
-  color: black;
-  font-size: 0.7rem;
-  padding: 2px 6px;
-  border-radius: 50%;
-  font-weight: bold;
-}
 
 /* 6. Hero Section */
 .hero {
@@ -76,12 +66,44 @@ body {
   text-align: center;
 }
 
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff; /* Base color: White */
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  display: inline-block;
+  animation: word-glow 3s infinite; /* 3 seconds total loop */
+}
+
+/* Keyframes for the color change */
+@keyframes word-glow {
+  0%, 10%, 100% {
+    color: #fff; /* White most of the time */
+  }
+  20% {
+    color: #d7d406; /* Glow Yellow briefly */
+  }
+}
+
+/* Staggering the animation for each word */
+.hero-title span:nth-child(1) { animation-delay: 0s; }
+.hero-title span:nth-child(2) { animation-delay: 0.5s; }
+.hero-title span:nth-child(3) { animation-delay: 1s; }
+
+
+
+
+
 .section-divider {
-  border: 0;
-  border-color: #ffffff;
+  border: 1px solid #687c1f; /* Use #333 for a subtle dark grey or #fff for bright white */
+  border-color: #8ca412;
   border-top: 1px solid #333; /* Use #333 for a subtle dark grey or #fff for bright white */
   margin: 0; /* Removes the gap between the nav and the line */
-  opacity: 0.5; /* Makes it look elegant and not too "heavy" */
+  opacity: 1; /* Makes it look elegant and not too "heavy" */
 }
 
 .info-section {
@@ -89,4 +111,51 @@ body {
     color: #fff;
     padding: 600px 20px;
     text-align: center;
+}
+
+
+
+
+
+/* Section Container */
+.hero-section {
+  background: #000;
+  padding: 80px 0;
+  overflow: hidden; /* Keeps the glow circle from causing scrollbars */
+}
+
+/* Typography */
+.hero-text {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Visual Elements */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+}
+
+/* Buttons (Generic names for reuse) */
+.btn-solid {
+  background: #d7d406;
+  color: #000;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-outline {
+  border: 1px solid #d7d406;
+  color: #d7d406;
+  padding: 12px 30px;
+  text-decoration: none;
 }
