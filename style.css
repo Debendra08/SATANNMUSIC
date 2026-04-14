@@ -65,8 +65,7 @@ body {
 
 /* 6. Hero Section */
 .hero {
-  background: url('https://i.imgur.com/8Zt3X9s.png') no-repeat center center;
-  background-size: cover;
+    background-size: cover;
   background-color: #000;
   height: 100vh;
   display: flex;
