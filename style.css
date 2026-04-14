@@ -1,0 +1,93 @@
+/* 1. Root Variables */
+:root {
+  --lime-green: #c1ff00;
+  --brand-yellow: #d7d406;
+}
+
+/* 2. Page & Navbar Backgrounds */
+body {
+  background-color: #000;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+/* 3. The Brand/Logo Fix */
+.navbar-custom .navbar-brand {
+  color: #ffffff !important;
+  transition: 0.3s;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: var(--brand-yellow) !important;
+}
+
+/* 4. Navigation Links */
+.navbar-custom .nav-link {
+  color: #ccc !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-custom .nav-link:hover, 
+.navbar-custom .nav-link.active {
+  color: var(--brand-yellow) !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* 5. Buttons & Icons */
+.btn-outline-lime {
+  color: var(--lime-green);
+  border: 1px solid var(--lime-green);
+  border-radius: 0;
+  padding: 8px 20px;
+  transition: 0.3s;
+}
+
+.btn-outline-lime:hover {
+  background-color: var(--lime-green);
+  color: #000;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: white;
+  color: black;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* 6. Hero Section */
+.hero {
+  background: url('https://i.imgur.com/8Zt3X9s.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.section-divider {
+  border: 0;
+  border-color: #ffffff;
+  border-top: 1px solid #333; /* Use #333 for a subtle dark grey or #fff for bright white */
+  margin: 0; /* Removes the gap between the nav and the line */
+  opacity: 0.5; /* Makes it look elegant and not too "heavy" */
+}
+
+.info-section {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 600px 20px;
+    text-align: center;
+}
