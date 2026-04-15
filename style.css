@@ -14,6 +14,86 @@ body {
   background-color: #000 !important;
 }
 
+
+
+
+
+
+
+/* The automatic active highlight */
+.navbar-custom .nav-link.active {
+    color: #d7d406 !important; /* Your Brand Yellow */
+    font-weight: bold;
+    position: relative;
+}
+
+/* Optional: Add a small yellow underline to the active link */
+.navbar-custom .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: #d7d406;
+}
+
+/* Hover remains yellow too */
+.navbar-custom .nav-link:hover {
+    color: #d7d406 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for the sticky Navbar */
+.navbar-custom.sticky-top {
+  border-bottom: 1px solid #222; /* Adds a clean line at the bottom */
+  background-color: rgba(0, 0, 0, 0.95) !important; /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Blurs content as it scrolls behind */
+  z-index: 1050; /* Ensures it stays above all other content */
+}
+
+/* Optional: Make the brand glow in your yellow color */
+.navbar-brand span {
+  color: #d7d406; 
+  transition: 0.3s;
+}
+
+.navbar-brand:hover span {
+  text-shadow: 0 0 10px rgba(215, 212, 6, 0.6);
+}
+
+/* Smooth hover for nav links */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d7d406 !important;
+}
+
+/* Fix for scrolling: ensures content doesn't hide behind the navbar */
+html {
+  scroll-padding-top: 80px; 
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
 /* 3. The Brand/Logo Fix */
 .navbar-custom .navbar-brand {
   color: #d7d406 !important;
