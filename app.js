@@ -10,4 +10,12 @@ window.addEventListener("mousemove", (e) => {
 });
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+// Automatically close the mobile menu when a link is clicked
+  const navLinks = document.querySelectorAll('.nav-link');
+  const menuToggle = document.getElementById('navContent');
+  const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
+  
+  navLinks.forEach((l) => {
+      l.addEventListener('click', () => { bsCollapse.hide() });
+  });
