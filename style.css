@@ -513,3 +513,23 @@ hr.border-secondary {
   letter-spacing: 0.5px;
   opacity: 0.8;
 }
+
+
+
+
+
+/* Normal state */
+.devnis-link {
+  color: #ffffff; /* Matches your text-secondary color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Smooth transition for color and shadow */
+  display: inline-block;
+}
+
+/* Hover state */
+.devnis-link:hover {
+  color: #d7d406 !important; /* Your brand yellow */
+  text-shadow: 0 0 8px rgba(215, 212, 6, 0.4); /* Subtle yellow glow */
+  transform: translateY(-1px); /* Very slight lift */
+}
